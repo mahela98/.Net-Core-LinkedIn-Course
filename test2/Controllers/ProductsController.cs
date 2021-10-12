@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace test2.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
         [HttpGet]
-        public void GetProducts()
+        public string GetProducts()
         {
+            return "ok";
 
         }
     }
