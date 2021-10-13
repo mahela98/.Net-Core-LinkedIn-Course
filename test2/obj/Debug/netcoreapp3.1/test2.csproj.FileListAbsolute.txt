@@ -19,3 +19,17 @@ E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.RazorTargetAssemblyInfo.cac
 E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.dll
 E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.pdb
 E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.genruntimeconfig.cache
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll

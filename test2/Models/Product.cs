@@ -13,7 +13,9 @@ namespace test2.Models
         public string Name { get; set; }
         public String Description { get; set; }
         public decimal Price { get; set; }
-        public bool IsAvailabel { get; set; }
+        public bool IsAvailable { get; set; }
+
+        public int CategoryId { get; set; }
 
         [JsonIgnore]
         public virtual Category Category  { get; set; }

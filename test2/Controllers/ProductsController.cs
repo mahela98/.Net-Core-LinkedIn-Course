@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using test2.Models;
 
 namespace test2.Controllers
 {
@@ -11,10 +12,19 @@ namespace test2.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        [HttpGet]
-        public string GetProducts()
+        private readonly ShopContext _context;
+
+        public ProductsController(ShopContext context)
         {
-            return "ok";
+            _context = context;
+            _context.Database.EnsureCreated();
+
+        }
+
+        [HttpGet]
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return _context.Products.ToArray();
 
         }
     }
