@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using test2.Classes;
 using test2.Models;
 
 namespace test2.Controllers
@@ -14,19 +15,18 @@ namespace test2.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly ShopContext _context;
-
         public ProductsController(ShopContext context)
         {
             _context = context;
             _context.Database.EnsureCreated();
-
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllProducts()
+        public async Task<IActionResult> GetAllProducts( [FromQuery] QueryParameters queryParameters )
         {
-            return Ok(await _context.Products.ToArrayAsync());
-
+            IQueryable<Product> products = _context.Products;
+            products = products.Skip(queryParameters.Size * (queryParameters.Page - 1)).Take(queryParameters.Size);
+            return Ok(await products.ToArrayAsync());
         }
 
         [HttpGet ("{id:int}")]
