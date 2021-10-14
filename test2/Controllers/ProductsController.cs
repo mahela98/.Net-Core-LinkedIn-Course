@@ -53,12 +53,7 @@ namespace test2.Controllers
                     products = products.OrderByCustom(queryParameters.SortBy, queryParameters.SortOrder);
                 }
             }
-            
-            
             products = products.Skip(queryParameters.Size * (queryParameters.Page - 1)).Take(queryParameters.Size);
-           
-            
-            
             return Ok(await products.ToArrayAsync());
         }
 
@@ -76,7 +71,19 @@ namespace test2.Controllers
             }
         }
 
+        [HttpPost]
+         public async Task<ActionResult<Product>> PostProduct([FromBody] Product product)
+        {
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
 
+            return CreatedAtAction(
+                "Getproduct",
+                new  { id = product.Id},
+                product);
+
+
+        }
 
 
 
