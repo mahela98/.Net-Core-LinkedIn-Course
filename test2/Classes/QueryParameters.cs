@@ -23,6 +23,25 @@ namespace test2.Classes
             }
         }
 
+        public string SortBy { get; set; } = "Id";
+        private string _sortOrder = "asd";
+        public string SortOrder
+        {
+            get
+            {
+                return _sortOrder;
+            }
+            set
+            {
+                if (value == "asc" || value=="desc")
+                {
+                    _sortOrder = value;
+                }
+            }
+        }
+
+
+
 
     }
 }
