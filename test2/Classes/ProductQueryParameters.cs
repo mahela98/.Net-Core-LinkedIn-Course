@@ -12,6 +12,11 @@ namespace test2.Classes
         public decimal? MaxPrice { get; set; }
         public string Name { get; set; }
 
+        //for advanced search
+        public string SearchTerm { get; set; }
+
+
+
 
 
     }
