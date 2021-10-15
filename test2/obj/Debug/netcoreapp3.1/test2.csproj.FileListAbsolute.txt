@@ -33,3 +33,7 @@ E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.d
 E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
+E:\DOT-net\test2\test2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.MvcApplicationPartsAssemblyInfo.cs
+E:\DOT-net\test2\test2\obj\Debug\netcoreapp3.1\test2.csproj.CopyComplete

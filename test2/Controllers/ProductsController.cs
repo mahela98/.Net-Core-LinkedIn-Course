@@ -10,7 +10,10 @@ using test2.Models;
 
 namespace test2.Controllers
 {
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [Route("v{v:apiVersion}/[controller]")]
+    //route for api version in header
+    //[Route("products")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -116,8 +119,35 @@ namespace test2.Controllers
             }
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-
             return product;
         }
+
+
+        [HttpPost]
+        [Route("Delete")]
+        public async Task<ActionResult> DeleteMultipleProducts([FromQuery]int[] ids)
+        {
+
+            var products = new List<Product>();
+
+
+            foreach (var id in ids)
+            {
+                var product = await _context.Products.FindAsync(id);
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                products.Add(product);
+            }
+
+
+            _context.Products.RemoveRange(products);
+            await _context.SaveChangesAsync();
+            return Ok(products);
+        }
+
     }
+
+
 }
