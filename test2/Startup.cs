@@ -37,13 +37,28 @@ namespace test2
                  //   options.SuppressModelStateInvalidFilter = true;
                 }) ;
 
+
+            //enabling cors
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("https://localhost:1234")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+
+                });
+            });
+
+
+
             services.AddApiVersioning(options => {
                 options.ReportApiVersions = true;
                 options.DefaultApiVersion = new ApiVersion(1, 0);
                 options.AssumeDefaultVersionWhenUnspecified = true;
 
                 //for api version in header
-              //  options.ApiVersionReader = new HeaderApiVersionReader("X-Api-Version");
+              //   options.ApiVersionReader = new HeaderApiVersionReader("X-Api-Version");
 
             });
         }
@@ -59,6 +74,8 @@ namespace test2
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            //for cors
+            app.UseCors();
 
             app.UseAuthorization();
 
