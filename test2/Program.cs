@@ -7,8 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// Testing a Push
-
 namespace test2
 {
     public class Program
